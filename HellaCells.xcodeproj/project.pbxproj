@@ -14,6 +14,7 @@
 		728B989919EEEFEB000F274D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 728B989719EEEFEB000F274D /* LaunchScreen.xib */; };
 		AC258099A25EB4830D99815D /* libPods-HellaCellsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3326D7C1069EDA1B7A3400FE /* libPods-HellaCellsTests.a */; };
 		C0BCD99D1EB4EFB6008BF0B4 /* FISHellaMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BCD99C1EB4EFB6008BF0B4 /* FISHellaMasterTableViewController.m */; };
+		C0BCD9A01EB512FD008BF0B4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BCD99F1EB512FD008BF0B4 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		728B98A319EEEFEB000F274D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0BCD99B1EB4EFB6008BF0B4 /* FISHellaMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISHellaMasterTableViewController.h; sourceTree = "<group>"; };
 		C0BCD99C1EB4EFB6008BF0B4 /* FISHellaMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISHellaMasterTableViewController.m; sourceTree = "<group>"; };
+		C0BCD99E1EB512FD008BF0B4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		C0BCD99F1EB512FD008BF0B4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		EBDAB0F5E981815F4CE95450 /* Pods-HellaCellsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HellaCellsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HellaCellsTests/Pods-HellaCellsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +106,8 @@
 				728B988819EEEFEB000F274D /* Supporting Files */,
 				C0BCD99B1EB4EFB6008BF0B4 /* FISHellaMasterTableViewController.h */,
 				C0BCD99C1EB4EFB6008BF0B4 /* FISHellaMasterTableViewController.m */,
+				C0BCD99E1EB512FD008BF0B4 /* DetailViewController.h */,
+				C0BCD99F1EB512FD008BF0B4 /* DetailViewController.m */,
 			);
 			path = HellaCells;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				728B988E19EEEFEB000F274D /* AppDelegate.m in Sources */,
 				728B988B19EEEFEB000F274D /* main.m in Sources */,
 				C0BCD99D1EB4EFB6008BF0B4 /* FISHellaMasterTableViewController.m in Sources */,
+				C0BCD9A01EB512FD008BF0B4 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

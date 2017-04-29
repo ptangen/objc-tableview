@@ -7,8 +7,12 @@
 //
 
 #import "FISHellaMasterTableViewController.h"
+#import "DetailViewController.h"
 
 @interface FISHellaMasterTableViewController ()
+
+@property (strong, nonatomic) NSMutableArray *numbersArray;
+@property (strong, nonatomic) NSNumber *iNumber;
 
 @end
 
@@ -17,8 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.numbersArray = [[NSMutableArray alloc] init];
+    
+    for(NSUInteger i = 1; i <= 100; i++) {
+        self.iNumber = @(i);
+        [self.numbersArray addObject: self.iNumber];
+    }
+    
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -32,23 +43,25 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-    return 100;
+    return [self.numbersArray count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"prototype" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"cell %lu", indexPath.row + 1];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", _numbersArray[indexPath.row]];
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // get the indexValue and then get the cooresponding value from the array and then assign the value to the property in the destination VC
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    ((DetailViewController *)segue.destinationViewController).showNumber = [self.numbersArray[indexPath.row] integerValue];
+}
 
 /*
 // Override to support editing the table view.
